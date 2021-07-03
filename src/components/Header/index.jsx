@@ -1,10 +1,17 @@
+import Logo from "assets/img/logo.svg";
 import React from "react";
+import { Link } from "react-router-dom";
+import { PATHS } from "../../constants";
 
 const Header = () => {
+    const handleToggleNavbar = () => {
+        document.body.classList.toggle("menu-is-show");
+    };
+
     return (
         <header id="header">
             <div className="wrap">
-                <div className="menu-hambeger">
+                <div onClick={handleToggleNavbar} className="menu-hambeger">
                     <div className="button">
                         <span />
                         <span />
@@ -12,10 +19,10 @@ const Header = () => {
                     </div>
                     <span className="text">menu</span>
                 </div>
-                <a href="!#" className="logo">
-                    <img src="/img/logo.svg" alt="" />
+                <Link to={PATHS.HOME} className="logo">
+                    <img src={Logo} alt="" />
                     <h1>CFD</h1>
-                </a>
+                </Link>
                 <div className="right">
                     <div className="have-login">
                         <div className="account">

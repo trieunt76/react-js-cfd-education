@@ -1,0 +1,5 @@
+.nav ul li a.active {
+    background-color: #00afab;
+    color: #fff;
+    transition: all 0.4s;
+}

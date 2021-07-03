@@ -1,15 +1,9 @@
-import { Footer, Header } from "components";
-import Payment from "pages/Payment";
+import { AppProvider, renderRouters } from "core";
 import React from "react";
+import routers from "routers";
 
 const App = () => {
-    return (
-        <>
-            <Header />
-            <Payment />
-            <Footer />
-        </>
-    );
+    return <AppProvider>{renderRouters(routers)}</AppProvider>;
 };
 
 export default App;
